@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Library</title>
+        <title>REALITY DESIGNERS | Library</title>
         <meta name="description" content="My website description"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
