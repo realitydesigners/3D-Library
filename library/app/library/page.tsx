@@ -8,6 +8,11 @@ const ReactScene = dynamic<{}>(
   { ssr: false }
 );
 
+const Stars = dynamic<{}>(
+  () => import("../components/Stars").then((mod) => mod.default),
+  { ssr: false }
+);
+
 export default function Home() {
   return (
     <>
@@ -17,8 +22,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="flex w-screen h-screen bg-black relative">
-          <div className="w-full h-full absolute">
+        <div className="absolute w-screen h-screen z-0">
+          {" "}
+          <Stars />
+        </div>
+
+        <div className="flex w-screen h-screen relative">
+          <div className="w-full h-full absolute z-10">
             <ReactScene />
           </div>
         </div>
